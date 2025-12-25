@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smooth_corner/smooth_corner.dart';
 import 'package:task_app/utils/text_field.dart';
 
@@ -114,7 +115,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            log("signup");
+                            context.go("/login");
                           },
                       ),
                     ],
